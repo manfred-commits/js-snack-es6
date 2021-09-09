@@ -50,4 +50,24 @@ const bici =[
     },
 ]
 
+let biciPiùLeggera=bici[0]["peso"];
 
+console.log(biciPiùLeggera);
+
+let posizione =0;
+
+console.log(posizione);
+
+for(let i=0; i<bici.length;i++){
+
+    if(biciPiùLeggera>bici[i]["peso"]){
+        biciPiùLeggera=bici[i]["peso"];
+        posizione=i;
+    }
+
+}
+console.log(biciPiùLeggera);
+
+console.log(posizione);
+
+console.log(`La bici più leggera è la ${bici[posizione]["nome"]} con un peso pari a ${biciPiùLeggera}`);
