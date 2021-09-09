@@ -51,24 +51,52 @@ const bici =[
 ]
 console.log(bici);
 
-let biciPiùLeggera=bici[0]["peso"];
 
-console.log(biciPiùLeggera);
+// let biciPiùLeggera=bici[0]["peso"];
 
-let posizione =0;
+// console.log(biciPiùLeggera);
 
-console.log(posizione);
+// let posizione =0;
+
+// console.log(posizione);
+
+// for(let i=0; i<bici.length;i++){
+
+//     if(biciPiùLeggera>bici[i]["peso"]){
+//         biciPiùLeggera=bici[i]["peso"];
+//         posizione=i;
+//     }
+
+// }
+// console.log(biciPiùLeggera);
+
+// console.log(posizione);
+
+// console.log(`La bici più leggera è la ${bici[posizione]["nome"]} con un peso pari a ${biciPiùLeggera}`);
+
+
+// SOLUZIONE DESTRUCTURING
+
+// questa dichiarazione equivale a dire:
+// let nome=bici[0].nome;
+// let peso=bici[0].peso;
+
+let {nome,peso}= bici[0];
+
+console.log(nome,peso);
+
+
 
 for(let i=0; i<bici.length;i++){
 
-    if(biciPiùLeggera>bici[i]["peso"]){
-        biciPiùLeggera=bici[i]["peso"];
-        posizione=i;
+    if(peso>bici[i]["peso"]){
+        peso=bici[i].peso;
+        nome=bici[i].nome;
     }
 
 }
-console.log(biciPiùLeggera);
+console.log(peso,nome);
 
-console.log(posizione);
+console.log(`La bici più leggera è la ${nome} con un peso pari a ${peso}`);
 
-console.log(`La bici più leggera è la ${bici[posizione]["nome"]} con un peso pari a ${biciPiùLeggera}`);
+// SOLUZIONE DESTRUCTURING
