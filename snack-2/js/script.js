@@ -23,11 +23,12 @@ let nome=[];
 let squadreDiCalcio=[];
 
 let nuoveSquadre = {
-        "nome":nome,
-        "puntiFatti":0,
-        "falliSubiti":0,
+    "nome":nome,
+    "puntiFatti":0,
+    "falliSubiti":0,
 }
 
+const getRndInt = (min,max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 
 
@@ -43,15 +44,16 @@ for(let i=0;i<contatore;i++){
     squadreDiCalcio.push(
         nuoveSquadre = {
             "nome":nome[i],
-            "puntiFatti":0,
-            "falliSubiti":0,
+
+            // Generare numeri random al posto degli 0 nelle proprietà
+            "puntiFatti":getRndInt(1,10),
+            "falliSubiti":getRndInt(1,10),
     }   
     );
 }
 
 console.log(squadreDiCalcio);
 
-const getRndInt = (min,max) => Math.floor(Math.random() + (max -min +1))+min;
 
 
 
