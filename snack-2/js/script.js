@@ -45,7 +45,9 @@ for(let i=0;i<contatore;i++){
         nuoveSquadre = {
             "nome":nome[i],
 
-            // Generare numeri random al posto degli 0 nelle proprietà
+            // Generare numeri random al posto degli 0 nelle proprietà:
+            // Punti fatti e falli subiti.
+
             "puntiFatti":getRndInt(1,10),
             "falliSubiti":getRndInt(1,10),
     }   
@@ -54,7 +56,18 @@ for(let i=0;i<contatore;i++){
 
 console.log(squadreDiCalcio);
 
+// 2. Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
+const nuovoArray= []; 
 
+for(let i=0;i<contatore;i++){
+    nuovoArray.push( 
+        {
+         "nome":squadreDiCalcio[i].nome,
+         "falliSubiti":squadreDiCalcio[i].falliSubiti
+        }
+    )
+}
 
+console.log(nuovoArray);
 
