@@ -58,16 +58,15 @@ console.log(squadreDiCalcio);
 
 // 2. Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
-
+let nuovoArray=[];
 // bozza destrutturazione
-let[
-    {
-        nome:nuovoNome,
-        falliSubiti:nuoviFalli,
-    }
-]=squadreDiCalcio;
+for(let i=0;i<squadreDiCalcio.length;i++){
 
-console.log(nuovoNome,nuoviFalli);
+    let{nome,falliSubiti}=squadreDiCalcio[i];
+    nuovoArray.push({nome,falliSubiti});
+}
+
+console.log(nuovoArray);
 
 
 
