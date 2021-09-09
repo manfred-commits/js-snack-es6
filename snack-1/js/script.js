@@ -49,6 +49,7 @@ const bici =[
         "peso": 4
     },
 ]
+console.log(bici);
 
 let biciPiùLeggera=bici[0]["peso"];
 
