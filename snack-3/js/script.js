@@ -44,7 +44,10 @@ const slicedArray = array.filter((element,index) => {
     }
 });
 
-
+console.log(slicedArray);
+console.log(`Nuovo array generato:
+${slicedArray}
+prendendo gli elementi di indice compresi tra i numeri ${num1} e ${num2}`);
 
 
 
