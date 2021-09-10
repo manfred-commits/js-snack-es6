@@ -38,6 +38,14 @@ console.log(`Array ${array}`);
 
 
 
+const slicedArray = array.filter((element,index) => {
+    if(index>=num1 && index<=num2){
+        return true;
+    }
+});
+
+
+
 
 
 
