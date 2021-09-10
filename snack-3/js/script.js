@@ -7,6 +7,12 @@
 
 
 
+// SEZIONE FUNZIONI
+    const rndmInt=(min,max) => Math.floor(Math.random() * (max - min + 1) + min);
+// /SEZIONE FUNZIONI
+
+
+
 // SEZIONE CODICE PRINCIPALE
 
 
@@ -17,9 +23,17 @@
 // SEZIONE VARIABILI
 
 
-let num1 = 1;
-let num2 = 5 ;
 let array = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+let num1 = rndmInt(0,array.length);
+let num2 = rndmInt(0,array.length);
+
+while(num1>num2){
+    num1 = rndmInt(0,array.length);
+}
+while(num2<num1){
+    num2 = rndmInt(0,array.length);
+}
+ 
 
 console.log(`Primo numero ${num1}`);
 console.log(`Secondo numero ${num2}`);
